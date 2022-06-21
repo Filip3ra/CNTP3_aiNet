@@ -84,3 +84,5 @@ for i in range(size_1):
 
 for k in range(len(sum_array)):
     print(sum_array[k])
+
+# falta ler os dadasets

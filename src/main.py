@@ -3,12 +3,12 @@ import numpy as np
 import random
 from data import get_DataSet
 
-"""Dados de entrada e constantes:"""
+# DADOS DE ENTRADA E CONSTANTES
 
 ITEMS_DATA = get_DataSet()
 ITEMS_QUANTITY = GRID_SIZE = len(ITEMS_DATA)
 
-"""Gera a Grade:"""
+'''GERO UMA GRADE'''
 
 
 def generate_new_grid():
@@ -16,7 +16,6 @@ def generate_new_grid():
 
 
 grid = generate_new_grid()
-
 print(grid)
 
 """Gera Anticorpos: A população Ab de anticorpos é composta por duas subpopulações, a **Abm** (anticorpos de memória) 
@@ -28,13 +27,13 @@ def generate_antibodies():
     antibodies = []
 
     for _ in range(math.floor(quantity / 2)):
-        random_height = random.uniform(1.8, 2.0)
-        random_score = random.uniform(0, 0.1)
+        random_height = random.uniform(0.01, 0.99)
+        random_score = random.uniform(0.01, 0.99)
         antibodies.append([random_height, random_score])
 
     for _ in range(math.floor(quantity / 2)):
-        random_height = random.uniform(1.5, 1.65)
-        random_score = random.uniform(0.8, 1)
+        random_height = random.uniform(0.01, 0.99)
+        random_score = random.uniform(0.01, 0.99)
         antibodies.append([random_height, random_score])
 
     return np.array(antibodies)
@@ -72,5 +71,8 @@ for i in range(len(ANTIBODIES)):
 
 for k in range(len(sum_array)):
     print(sum_array[k])
+
+
+
 
 # falta ler os dadasets

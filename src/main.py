@@ -1,21 +1,12 @@
 import math
 import numpy as np
 import random
+from data import get_DataSet
 
 """Dados de entrada e constantes:"""
 
-ITEMS_DATA = np.array([[1.60, 0.70],
-                       [1.53, 0.60],
-                       [1.62, 0.68],
-                       [1.64, 0.90],
-
-                       [1.85, 0.03],
-                       [1.84, 0.09],
-                       [1.89, 0.10],
-                       [1.90, 0.12],
-                       [1.83, 0.06]])
-
-ITEMS_QUANTITY = GRID_SIZE = ITEMS_DATA.shape[0]
+ITEMS_DATA = get_DataSet()
+ITEMS_QUANTITY = GRID_SIZE = len(ITEMS_DATA)
 
 """Gera a Grade:"""
 
@@ -60,12 +51,9 @@ def generate_antibodies():
 
 ANTIBODIES = generate_antibodies()
 
-size_1 = int(ANTIBODIES.size / 2)
-size_2 = int((ITEMS_DATA.size / 2))
-
 sum_affinity = 0.0
 sum_array = []
-
+'''
 for i in range(size_1):
     anti_body = ANTIBODIES[i]
     print("antibody = ", anti_body)
@@ -86,3 +74,4 @@ for k in range(len(sum_array)):
     print(sum_array[k])
 
 # falta ler os dadasets
+'''

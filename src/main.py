@@ -53,18 +53,18 @@ ANTIBODIES = generate_antibodies()
 
 sum_affinity = 0.0
 sum_array = []
-'''
-for i in range(size_1):
+
+for i in range(len(ANTIBODIES)):
     anti_body = ANTIBODIES[i]
     print("antibody = ", anti_body)
 
-    for j in range(size_2):
+    for j in range(len(ITEMS_DATA)):
         pow_1 = math.pow(ITEMS_DATA[j][0] - anti_body[0], 2)
         pow_2 = math.pow(ITEMS_DATA[j][1] - anti_body[1], 2)
         affinity = 1 / (math.sqrt(pow_1 + pow_2))
         sum_affinity += affinity
 
-        # print("um = ", ITEMS_DATA[j][0], "dois = ", ITEMS_DATA[j][1])
+        print("x1: ", ITEMS_DATA[j][0], "x2: ", ITEMS_DATA[j][1])
         print(affinity)
     print("Afinidade total = ", sum_affinity)
     sum_array.append(sum_affinity)
@@ -74,4 +74,3 @@ for k in range(len(sum_array)):
     print(sum_array[k])
 
 # falta ler os dadasets
-'''

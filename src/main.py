@@ -22,19 +22,21 @@ print(grid)
 e a **Abr** (anticorpos restantes). """
 
 
+# definir o mim max
+# gerar anticorpo usando o range do min e max de cada coluna
 def generate_antibodies():
-    quantity = 10
+    quantity = 5
     antibodies = []
 
     for _ in range(math.floor(quantity / 2)):
-        random_height = random.uniform(0.01, 0.99)
-        random_score = random.uniform(0.01, 0.99)
-        antibodies.append([random_height, random_score])
+        random_x1 = random.uniform(0, 0.99)
+        random_x2 = random.uniform(0, 0.99)
+        antibodies.append([random_x1, random_x2])
 
     for _ in range(math.floor(quantity / 2)):
-        random_height = random.uniform(0.01, 0.99)
-        random_score = random.uniform(0.01, 0.99)
-        antibodies.append([random_height, random_score])
+        random_x1 = random.uniform(0, 0.99)
+        random_x2 = random.uniform(0, 0.99)
+        antibodies.append([random_x1, random_x2])
 
     return np.array(antibodies)
 
@@ -63,16 +65,11 @@ for i in range(len(ANTIBODIES)):
         affinity = 1 / (math.sqrt(pow_1 + pow_2))
         sum_affinity += affinity
 
-        print("x1: ", ITEMS_DATA[j][0], "x2: ", ITEMS_DATA[j][1])
-        print(affinity)
+        #print("x1: ", ITEMS_DATA[j][0], "x2: ", ITEMS_DATA[j][1])
+        print(affinity, "\n")
     print("Afinidade total = ", sum_affinity)
     sum_array.append(sum_affinity)
     sum_affinity = 0.0
 
 for k in range(len(sum_array)):
     print(sum_array[k])
-
-
-
-
-# falta ler os dadasets

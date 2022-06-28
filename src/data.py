@@ -28,7 +28,7 @@ def get_DataSet():
 
                 line_count += 1
 
-        print(f'Processed {line_count} lines.')
+        #print(f'Processed {line_count} lines.')
 
     #print(max_value_col_1)
     #print(max_value_col_2)
